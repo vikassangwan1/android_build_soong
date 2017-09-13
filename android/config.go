@@ -563,3 +563,7 @@ func (c *deviceConfig) BoardUsesQTIHardware() bool {
 func (c *deviceConfig) TargetUsesQCOMBsp() bool {
 	return Bool(c.config.ProductVariables.TargetUsesQCOMBsp)
 }
+
+func (c *deviceConfig) TargetUsesNoTrebleCamera() bool {
+       return Bool(c.config.ProductVariables.TargetUsesNoTrebleCamera)
+}
