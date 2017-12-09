@@ -567,3 +567,7 @@ func (c *deviceConfig) TargetUsesQCOMBsp() bool {
 func (c *deviceConfig) TargetUsesNoTrebleCamera() bool {
        return Bool(c.config.ProductVariables.TargetUsesNoTrebleCamera)
 }
+
+func (c *deviceConfig) TargetHeaderPathDir() string {
+	return String(c.config.ProductVariables.TargetHeaderPath)
+}
