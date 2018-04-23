@@ -571,3 +571,7 @@ func (c *deviceConfig) TargetUsesNoTrebleCamera() bool {
 func (c *deviceConfig) TargetHeaderPathDir() string {
 	return String(c.config.ProductVariables.TargetHeaderPath)
 }
+
+func (c *deviceConfig) LegacyCam() bool {
+	return Bool(c.config.ProductVariables.LegacyCam)
+}

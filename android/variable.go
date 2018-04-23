@@ -178,6 +178,8 @@ type productVariables struct {
       TargetUsesNoTrebleCamera *bool `json:",omitempty"`
 
 	DeviceKernelHeaders []string `json:",omitempty"`
+
+	LegacyCam  *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
