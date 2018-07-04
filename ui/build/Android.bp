@@ -28,6 +28,7 @@ bootstrap_go_package {
         "dumpvars.go",
         "environment.go",
         "exec.go",
+        "java.go",
         "kati.go",
         "ninja.go",
         "proc_sync.go",
