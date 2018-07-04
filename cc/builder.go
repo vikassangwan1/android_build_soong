@@ -104,14 +104,13 @@ var (
 		"objcopyCmd", "prefix")
 
 	_ = pctx.SourcePathVariable("stripPath", "build/soong/scripts/strip.sh")
-	_ = pctx.SourcePathVariable("xzCmd", "prebuilts/build-tools/${config.HostPrebuiltTag}/bin/xz")
 
 	strip = pctx.AndroidStaticRule("strip",
 		blueprint.RuleParams{
 			Depfile:     "${out}.d",
 			Deps:        blueprint.DepsGCC,
-			Command:     "CROSS_COMPILE=$crossCompile XZ=$xzCmd CLANG_BIN=${config.ClangBin} $stripPath ${args} -i ${in} -o ${out} -d ${out}.d",
-			CommandDeps: []string{"$stripPath", "$xzCmd"},
+			Command:     "CROSS_COMPILE=$crossCompile CLANG_BIN=${config.ClangBin} $stripPath ${args} -i ${in} -o ${out} -d ${out}.d",
+			CommandDeps: []string{"$stripPath"},
 		},
 		"args", "crossCompile")
 
